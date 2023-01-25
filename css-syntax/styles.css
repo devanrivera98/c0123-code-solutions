@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+}
+
+article {
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: monospace;
+  font-size: 24px;
+}
+
+h2#html {
+  color: red;
+}
+
+h2#css {
+  color: green;
+}
+
+h2#js {
+  color: blue;
+}
