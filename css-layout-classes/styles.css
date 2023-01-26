@@ -1,0 +1,34 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-one-third {
+  flex-basis: calc(100%/3);
+}
+
+img {
+  width: 100%;
+}
+
+.column-one-fourth {
+  flex-basis: calc(100%/4);
+}
+
+.column-one-half {
+  flex-basis: calc(100%/2);
+}
+
+h1 {
+  margin-left: 70px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
