@@ -1,0 +1,57 @@
+.container {
+  background-color: rgb(4 183 243);
+  font-family: Lato, serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2") format("woff2");
+}
+
+.row {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxed {
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.three-column-paragraph {
+  color: white;
+  flex-basis: calc(100%/3);
+  text-align: center;
+}
+
+.headers {
+  flex-basis: calc(100%/3);
+}
+
+img {
+  width: 55%;
+  height: auto;
+  margin-left: 22px;
+  margin-top: 22px;
+}
+
+h2 {
+  font-size: 30px;
+  color: white;
+  padding-top: 30px;
+}
+
+h3 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  border: 10px;
+  line-height: 1.5em;
+  font-size: 16px;
+  width: 250px;
+  margin: auto;
+}
