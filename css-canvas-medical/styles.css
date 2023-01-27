@@ -1,0 +1,33 @@
+.container {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.two-columns {
+  flex-basis: calc(100%/2);
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.five-headers {
+  flex-basis: calc(100%/5);
+  width: min-content;
+  text-align: center;
+}
+
+button {
+  color: white;
+  background-color: rgb(12 28 118 / 80.1%);
+  width: 100px;
+  height: 30px;
+}
+
+h1 {
+  margin-left: 60px;
+}
