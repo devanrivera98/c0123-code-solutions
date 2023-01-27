@@ -1,0 +1,64 @@
+body {
+  margin: auto;
+}
+
+.container {
+  margin: auto;
+  font-family: Lato, Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2") format("woff2");
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-column {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.two-columns {
+  flex-basis: calc(100%/2);
+  justify-content: space-between;
+  margin-left: auto;
+  display: wrap;
+  padding: 26px;
+  width: 50%;
+  line-height: 15.5rem;
+}
+
+.text-one {
+  line-height: 1.8rem;
+}
+
+.text-two {
+  line-height: 1.8rem;
+  margin-right: 90px;
+}
+
+#header-text {
+  width: 600px;
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  background-color: white;
+  border-color: red;
+  color: red;
+  font-size: 20px;
+  padding: 10px 30px;
+}
+
+h3 {
+  font-size: 15px;
+}
