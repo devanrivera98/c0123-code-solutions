@@ -21,13 +21,63 @@
   text-align: center;
 }
 
-button {
+.smiling-woman {
+  padding: 60px;
+  padding-top: 40px;
+  max-width: 100%;
+}
+
+.women-text {
   color: white;
-  background-color: rgb(12 28 118 / 80.1%);
+  width: 45%;
+}
+
+#id-smiling-woman {
+  max-width: 100%;
+}
+
+#section-one {
+  width: 1000px;
+  height: 500px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+}
+
+#button-one {
+  color: white;
+  background-color: rgb(12 28 118 / 90.1%);
   width: 100px;
   height: 30px;
 }
 
-h1 {
+#button-two {
+  color: white;
+  background-color: rgb(12 28 118 / 90.1%);
+  width: 120px;
+  height: 40px;
+}
+
+#overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+h1#header-one {
   margin-left: 60px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p#paragraph-lady {
+  line-height: 1.4rem;
+  font-size: 18px;
 }
