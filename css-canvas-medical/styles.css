@@ -25,6 +25,7 @@
   line-height: 2.5rem;
   margin-bottom: 130px;
   padding-top: 80px;
+  font-size: 20px;
 }
 
 .two-columns-signup {
@@ -85,7 +86,7 @@
   color: white;
   background-color: rgb(12 28 118 / 90.1%);
   width: 100px;
-  height: 30px;
+  height: 40px;
 }
 
 #button-two {
@@ -111,7 +112,7 @@ img#header-one {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 33px;
 }
 
 h2 {
@@ -119,8 +120,8 @@ h2 {
 }
 
 p#paragraph-lady {
-  line-height: 1.4rem;
-  font-size: 18px;
+  line-height: 2rem;
+  font-size: 20px;
 }
 
 #section-three {
@@ -147,7 +148,9 @@ p#paragraph-lady {
 }
 
 p#clinician-details {
-  width: 100%;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #button-signup {
