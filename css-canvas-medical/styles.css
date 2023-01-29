@@ -6,6 +6,10 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("Avenir.woff2") format("woff2");
 }
 
 .two-columns {
@@ -15,9 +19,33 @@
   padding-right: 50px;
 }
 
+.two-columns-three-rows {
+  flex-basis: calc(100%/2);
+  text-align: center;
+  line-height: 2.5rem;
+  margin-bottom: 130px;
+  padding-top: 80px;
+}
+
+.two-columns-signup {
+  flex-basis: calc(100%/2);
+  align-self: center;
+  padding-left: 100px;
+}
+
+.two-columns-info {
+  flex-basis: calc(100%/3);
+  color: white;
+  padding-left: 60px;
+}
+
+.company-product-column {
+  padding-left: 130px;
+  font-size: 18px;
+}
+
 .five-headers {
   flex-basis: calc(100%/5);
-  width: min-content;
   text-align: center;
 }
 
@@ -30,6 +58,12 @@
 .women-text {
   color: white;
   width: 45%;
+  position: relative;
+}
+
+.full-column {
+  width: 100%;
+  text-align: center;
 }
 
 #id-smiling-woman {
@@ -37,13 +71,14 @@
 }
 
 #section-one {
-  width: 1000px;
-  height: 500px;
+  width: 1200px;
+  height: 600px;
   background-image: url("images/hero.jpg");
   background-size: cover;
   margin: auto;
   margin-top: 50px;
   position: relative;
+  margin-bottom: 50px;
 }
 
 #button-one {
@@ -77,7 +112,52 @@ h1 {
   font-size: 30px;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 p#paragraph-lady {
   line-height: 1.4rem;
   font-size: 18px;
+}
+
+#section-three {
+  display: flex;
+  padding-top: 50px;
+  background-color: #f4eff888;
+}
+
+#section-four {
+  padding-bottom: 30px;
+}
+
+#section-five {
+  background-color: rgb(85 83 83);
+  padding-top: 90px;
+}
+
+p#clinician-details {
+  width: 100%;
+}
+
+#button-signup {
+  margin-left: 340px;
+  color: white;
+  background-color: rgb(12 28 118 / 90.1%);
+  width: 150px;
+  height: 50px;
+}
+
+#company {
+  padding-left: 130px;
+}
+
+.street-address {
+  font-size: 15px;
+  line-height: 0.8rem;
+}
+
+img {
+  padding-bottom: 20px;
+  width: 160px;
 }
