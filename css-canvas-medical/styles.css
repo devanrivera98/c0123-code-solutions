@@ -104,8 +104,10 @@
   right: 0%;
 }
 
-h1#header-one {
-  margin-left: 60px;
+img#header-one {
+  margin-left: 100px;
+  width: 180px;
+  padding-top: 20px;
 }
 
 h1 {
@@ -134,6 +136,14 @@ p#paragraph-lady {
 #section-five {
   background-color: rgb(85 83 83);
   padding-top: 90px;
+  padding-left: 50px;
+  padding-bottom: 80px;
+}
+
+#section-six {
+  padding-left: 110px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 p#clinician-details {
@@ -150,6 +160,10 @@ p#clinician-details {
 
 #company {
   padding-left: 130px;
+}
+
+#contact-us {
+  margin-left: 50px;
 }
 
 .street-address {
