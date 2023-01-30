@@ -4,7 +4,7 @@ body {
 
 .container {
   margin: auto;
-  font-family: Lato, Georgia, "Times New Roman", Times, serif;
+  font-family: lato, sans-serif;
   font-style: normal;
   font-weight: 100;
   src: url("https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2") format("woff2");
