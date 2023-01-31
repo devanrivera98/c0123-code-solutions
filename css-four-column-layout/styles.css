@@ -24,3 +24,7 @@ h1 {
   flex-basis: 25%;
   width: 25%;
 }
+
+img {
+  width: 100%;
+}
