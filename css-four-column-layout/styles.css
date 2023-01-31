@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(211 211 211 / 64.6%);
+  margin: auto;
+  text-align: center;
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.four-columns {
+  flex-basis: 25%;
+}
+
+.row {
+  flex-basis: 25%;
+  display: flex;
+}
+
+.four-images {
+  flex-basis: 25%;
+  width: 25%;
+}
