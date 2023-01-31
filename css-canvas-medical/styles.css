@@ -9,7 +9,6 @@
   font-family: Avenir, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
-  src: url("Avenir.woff2") format("woff2");
 }
 
 .two-columns {
@@ -113,10 +112,19 @@ img#header-one {
 
 h1 {
   font-size: 33px;
+  font-family: "Tiempos Headline", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("TiemposHeadline-Regular.woff2") format("woff2");
 }
 
 h2 {
   font-size: 30px;
+  color: rgb(0 0 0 / 71.4%);
+  font-family: "Tiempos Headline", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("TiemposHeadline-Regular.woff2") format("woff2");
 }
 
 p#paragraph-lady {
@@ -124,10 +132,16 @@ p#paragraph-lady {
   font-size: 20px;
 }
 
+button {
+  border-radius: 8px;
+  border: 0;
+}
+
 #section-three {
   display: flex;
   padding-top: 50px;
   background-color: #f4eff888;
+  color: rgb(10 4 4 / 69%);
 }
 
 #section-four {
