@@ -1,0 +1,194 @@
+.container {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.two-columns {
+  flex-basis: calc(100%/2);
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.two-columns-three-rows {
+  flex-basis: calc(100%/2);
+  text-align: center;
+  line-height: 2.5rem;
+  margin-bottom: 130px;
+  padding-top: 80px;
+  font-size: 20px;
+}
+
+.two-columns-signup {
+  flex-basis: calc(100%/2);
+  align-self: center;
+  padding-left: 100px;
+}
+
+.two-columns-info {
+  flex-basis: calc(100%/3);
+  color: white;
+  padding-left: 60px;
+}
+
+.company-product-column {
+  padding-left: 130px;
+  font-size: 18px;
+}
+
+.five-headers {
+  flex-basis: calc(100%/5);
+  text-align: center;
+}
+
+.smiling-woman {
+  padding: 60px;
+  padding-top: 40px;
+  max-width: 100%;
+}
+
+.women-text {
+  color: white;
+  width: 45%;
+  position: relative;
+}
+
+.full-column {
+  width: 100%;
+  text-align: center;
+}
+
+#id-smiling-woman {
+  max-width: 100%;
+}
+
+#section-one {
+  width: 1200px;
+  height: 600px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#button-one {
+  color: white;
+  background-color: rgb(12 28 118 / 90.1%);
+  width: 100px;
+  height: 40px;
+}
+
+#button-two {
+  color: white;
+  background-color: rgb(12 28 118 / 90.1%);
+  width: 120px;
+  height: 40px;
+}
+
+#overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 50%));
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+img#header-one {
+  margin-left: 100px;
+  width: 180px;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 33px;
+  font-family: "Tiempos Headline", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("TiemposHeadline-Regular.woff2") format("woff2");
+}
+
+h2 {
+  font-size: 30px;
+  color: rgb(0 0 0 / 71.4%);
+  font-family: "Tiempos Headline", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("TiemposHeadline-Regular.woff2") format("woff2");
+}
+
+p#paragraph-lady {
+  line-height: 2rem;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 8px;
+  border: 0;
+}
+
+#section-three {
+  display: flex;
+  padding-top: 50px;
+  background-color: #f4eff888;
+  color: rgb(10 4 4 / 69%);
+}
+
+#section-four {
+  padding-bottom: 30px;
+}
+
+#section-five {
+  background-color: rgb(85 83 83);
+  padding-top: 90px;
+  padding-left: 50px;
+  padding-bottom: 80px;
+}
+
+#section-six {
+  padding-left: 110px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+p#clinician-details {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#button-signup {
+  margin-left: 340px;
+  color: white;
+  background-color: rgb(12 28 118 / 90.1%);
+  width: 150px;
+  height: 50px;
+}
+
+#company {
+  padding-left: 130px;
+}
+
+#contact-us {
+  margin-left: 50px;
+}
+
+.street-address {
+  font-size: 15px;
+  line-height: 0.8rem;
+}
+
+img {
+  padding-bottom: 20px;
+  width: 160px;
+}
