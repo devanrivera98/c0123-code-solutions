@@ -5,4 +5,5 @@ function includesSeven(array) {
       return true;
     }
   }
+  return false;
 }
