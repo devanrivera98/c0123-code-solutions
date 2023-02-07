@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  border: 0;
+}
+
+button.dark-button {
+  background-color: rgb(41 38 38 / 78.3%);
+  box-shadow: -10px -10px 10px rgb(40 27 27 / 48.6%);
+}
+
+button.light-button {
+  background-color: rgb(242 242 50 / 61.8%);
+}
+
+body.dark-body {
+  background-color: rgb(6 6 6);
+}
+
+body.light-body {
+  background-color: rgb(235 234 218 / 64.6%);
+}
