@@ -93,3 +93,4 @@ for (var i = 0; i < pokedex.length; i++) {
   var results = renderPokemon(pokedex[i]);
   $row.appendChild(results);
 }
+// giving me an error suggesting that I am tryubg to pass a string through
