@@ -85,6 +85,8 @@ function renderPokemon(pokemon) {
   var $paragraph = document.createElement('p');
   $paragraph.textContent = pokemon.description;
   $divThree.appendChild($paragraph);
+
+  return $divOne;
 }
 
 var $row = document.querySelector('.row');
@@ -93,4 +95,5 @@ for (var i = 0; i < pokedex.length; i++) {
   var results = renderPokemon(pokedex[i]);
   $row.appendChild(results);
 }
-// giving me an error suggesting that I am tryubg to pass a string through
+// giving me an error on my appendChild; had an issue with the parameter
+// forgot to include return on my function
