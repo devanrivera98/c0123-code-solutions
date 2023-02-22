@@ -28,6 +28,7 @@ Bank.prototype.getAccount = function (number) {
 
 Bank.prototype.getTotalAssets = function () {
   // console.log(this.accounts[2].transactions[0].type);
+  // console.log(this.accounts[2].transactions[0].amount);
   // console.log(this.accounts);
   if (this.accounts.length === 0) {
     return 0;
