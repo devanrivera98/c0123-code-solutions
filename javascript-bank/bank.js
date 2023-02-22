@@ -27,19 +27,25 @@ Bank.prototype.getAccount = function (number) {
 };
 
 Bank.prototype.getTotalAssets = function () {
-  // console.log(this.accounts[2].transactions[0].type);
-  // console.log(this.accounts[2].transactions[0].amount);
-  // console.log(this.accounts);
   if (this.accounts.length === 0) {
     return 0;
   }
   var total = 0;
   for (var i = 0; i < this.accounts.length; i++) {
-    if (this.accounts[i].transactions[0].type === 'deposit') {
-      total += this.accounts[i].transactions[0].amount;
-    } else {
-      total -= this.accounts[i].transactions[0].amount;
+    if (this.accounts[i].getBalance) {
+      total += this.accounts[i].getBalance();
     }
   }
   return total;
 };
+
+// original mistake below
+// var total = 0;
+// for (var i = 0; i < this.accounts.length; i++) {
+//   if (this.accounts[i].transactions[0].type === 'deposit') {
+//     total += this.accounts[i].transactions[0].amount;
+//   } else {
+//     total -= this.accounts[i].transactions[0].amount;
+//   }
+// }
+// return total;
