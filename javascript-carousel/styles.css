@@ -1,0 +1,36 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+}
+
+.holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 2rem;
+  height: 90%;
+}
+
+.arrows {
+  font-size: 2.5rem;
+}
+
+.selector {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 15rem;
+}
+
+.circle {
+  font-size: 3rem;
+}
+
+.hidden {
+  display: none;
+}
