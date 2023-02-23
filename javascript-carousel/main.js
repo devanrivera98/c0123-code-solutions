@@ -20,6 +20,7 @@ function clickCircle(event) {
     }
   }
   clearInterval(intervalID);
+
 }
 
 var intervalID = setInterval(myCarousel, 2000);
