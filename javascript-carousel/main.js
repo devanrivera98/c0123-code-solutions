@@ -19,11 +19,11 @@ function clickCircle(event) {
       $allImages[i].classList.add('hidden');
     }
   }
-  clearInterval(intervalID);
-
+  // clearInterval(intervalID);
+  setTimeout(intervalID, 3000);
 }
 
-var intervalID = setInterval(myCarousel, 2000);
+var intervalID = setInterval(myCarousel, 3000);
 
 function myCarousel() {
   // console.log(currentIndex);
@@ -55,11 +55,14 @@ function rightFunction(event) {
       $allCircles[i].classList.add('fa-regular');
       $allImages[i].classList.add('hidden');
     }
+    // clearInterval(intervalID);
   }
   currentIndex++;
   if (currentIndex > $allCircles.length - 1) {
     currentIndex = 0;
   }
+  // clearInterval(intervalID);
+  setTimeout(intervalID, 3000);
 }
 
 $leftArrow.addEventListener('click', leftFunction);
@@ -79,5 +82,6 @@ function leftFunction() {
   if (currentIndex < 0) {
     currentIndex = 3;
   }
-  clearInterval(intervalID);
+  // clearInterval(intervalID);
+  setTimeout(intervalID, 3000);
 }
