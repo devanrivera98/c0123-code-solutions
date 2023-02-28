@@ -1,9 +1,7 @@
 /* exported defaults */
 function defaults(target, source) {
   for (var key in source) {
-    // console.log(key);
     if (!(key in target)) { target[key] = source[key]; }
-    // console.log(target);
   }
 }
 
@@ -12,4 +10,4 @@ function defaults(target, source) {
 // return value - this function does not return anything, but it does modify target
 // for key property of source
 // if the key property of source is not in the target
-// make the new value of target equal the value of the source key???
+// make the new value of target equal the value of the source key
