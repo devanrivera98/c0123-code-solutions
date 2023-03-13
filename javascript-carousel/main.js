@@ -19,10 +19,11 @@ function clickCircle(event) {
       $allImages[i].classList.add('hidden');
     }
   }
-  setTimeout(intervalID, 3000);
+  clearInterval(intervalId, 3000);
+  intervalId = setInterval(myCarousel, 3000);
 }
 
-var intervalID = setInterval(myCarousel, 3000);
+var intervalId = setInterval(myCarousel, 3000);
 
 function myCarousel() {
   for (var i = 0; i < $allCircles.length; i++) {
@@ -58,7 +59,8 @@ function rightFunction(event) {
   if (currentIndex > $allCircles.length - 1) {
     currentIndex = 0;
   }
-  setTimeout(intervalID, 3000);
+  clearInterval(intervalId);
+  intervalId = setInterval(myCarousel, 3000);
 }
 
 $leftArrow.addEventListener('click', leftFunction);
@@ -78,5 +80,6 @@ function leftFunction() {
   if (currentIndex < 0) {
     currentIndex = 3;
   }
-  setTimeout(intervalID, 3000);
+  clearInterval(intervalId);
+  intervalId = setInterval(myCarousel, 3000);
 }
