@@ -1,0 +1,500 @@
+  132  git push origin main 
+  133  git push origin dom-event-delegation
+  134  git switch main
+  135  git pull origin main
+  136  git switch main
+  137  git pull origin main
+  138  git switch main
+  139  git pull origin main
+  140  git branch javascript-view-swapping
+  141  git switch javascript-view-swapping
+  142  git status 
+  143  git status
+  144  git add javascript-view-swapping
+  145  git status
+  146  git commit -m "Completed javascript-view-swapping exercise."
+  147  git push origin javascript-view-swapping
+  148  git switch main
+  149  git switch main
+  150  git pull origin main
+  151  git switch main
+  152  git pull origin main
+  153  git branch css-responsive-layout
+  154  git switch css-responsive-layout
+  155  git status 
+  156  git add css-responsive-layout
+  157  git status 
+  158  git commit -m "Completed css-responsive-layout exercise."
+  159  git push origin css-responsive-layout
+  160  git switch main
+  161  git switch main
+  162  git pull origin main
+  163  git switch dom-creation
+  164  git status
+  165  git add dom-creation
+  166  git status
+  167  git commit -m "Completed dom-creation exercise."
+  168  git push origin dom-creation
+  169  git switch main
+  170  git pull origin main
+  171  git switch main
+  172  git pull origin main
+  173  git branch javascript-and-json
+  174  git switch javascript-and-json
+  175  git status
+  176  git add javascript-and-json
+  177  git status
+  178  git commit -m "Completed javascript-and-json exercise."
+  179  git push origin javascript-and-json
+  180  git switch main
+  181  git pull origin main
+  182  git switch main
+  183  git pull origin main
+  184  git branch javascript-local-storage 
+  185  git switch javascript-local-storage
+  186  git status
+  187  git add javascript-local-storage
+  188  git status
+  189  git commit -m "Completed javascript-local-storage exercise."
+  190  git push origin javascript-local-storage
+  191  git switch main
+  192  git pull origin main
+  193  git switch main
+  194  git pull origin main
+  195  git branch string-manipulation-2
+  196  git switch string-manipulation-2
+  197  git status
+  198  git add string-manipulation-2
+  199  git status
+  200  git commit- "Completed string-manipulation-2."
+  201  git commit -m "Completed string-manipulation-2."
+  202  git push origin string-manipulation-2
+  203  git switch main
+  204  git pull origin main
+  205  git branch array-manipulation-2
+  206  git switch array-manipulation-2
+  207  git status
+  208  git add array-manipulation-2
+  209  git status
+  210  git commit -m "completed array-manipulation-2." 
+  211  git push origin array-manipulation-2
+  212  git switch main
+  213  git pull origin main
+  214  git branch object-manipulation-2
+  215  git switch object-manipulation-2
+  216  git status
+  217  git add object-manipulation-2
+  218  git status
+  219  git push origin object-manipulation-2
+  220  git switch main
+  221  git switch object-manipulation-2
+  222  git status
+  223  git commit -m "Completed object-manipulation-2."
+  224  git push origin object-manipulation-2
+  225  git switch main
+  226  git switch main
+  227  git pull origin main
+  228  git branch javascript-custom-methods
+  229  git switch javascript-custom-methods
+  230  git status
+  231  git add javascript-custom-methods 
+  232  git status
+  233  git commit -m "completed javascript-custom-methods"
+  234  git push origin javascript-custom-methods
+  235  git switch main
+  236  git switch main
+  237  git pull origin main 
+  238  git switch main
+  239  git pull origin main
+  240  git branch javascript-this
+  241  git switch javascript-thid
+  242  git switch javascript-this
+  243  git status
+  244  git add javascript-this
+  245  git status
+  246  git commit -m "Completed javascript-this exercise" 
+  247  git push origin javascript-this 
+  248  git switch main
+  249  git pull origin main
+  250  git switch main
+  251  git pull origin main
+  252  git branch javascript-prototypes
+  253  git switch javascript-prototypes
+  254  git status
+  255  git add javascript-prototypes
+  256  git status
+  257  git commit -m "Completed javascript-prototypes exercise."
+  258  git push origin javascript-prototypes 
+  259  git switch main
+  260  git pull origin main 
+  261  git switch main
+  262  git status
+  263  git pull origin main
+  264  git branch javascript-constructors
+  265  git switch javascript-constructors 
+  266  git status
+  267  git add javascript-constructors 
+  268  git status
+  269  git commit -m "Completed javascript-constructors exercise"
+  270  git push origin javascript-constructors 
+  271  git switch main
+  272  git switch javascript-prototype
+  273  git switch javascript-constructors
+  274  git status
+  275  git add javascript-constructors/student.js
+  276  git status
+  277  git commit -m "removed the duplicated methods."
+  278  git push origin javascript-constructors 
+  279  git switch main
+  280  git pull origin main
+  281  git switch javascript-constructor
+  282  git switch main
+  283  git pull origin main
+  284  git branch javascript-bank
+  285  git swtich javascript-bank
+  286  git switch javascript-bank
+  287  git status
+  288  git add javascript-bank
+  289  git commit -m "update"
+  290  git status
+  291  git add javascript-bank
+  292  git status
+  293  git commit -m "update" 
+  294  git switch main
+  295  git pull origin main
+  296  git branch javascript-timers
+  297  git switch javascript-timers
+  298  git switch main
+  299  git switch javascript-bank
+  300  git switch main
+  301  git switch javascript-timers
+  302  git status
+  303  git add javascript-timers 
+  304  git status 
+  305  git commit -m "completed javascript-timers exercise"
+  306  git push origin javascript-timers
+  307  git switch main
+  308  git status
+  309  git pull origin main
+  310  git switch main
+  311  git switch javascript-bank
+  312  git status 
+  313  git status
+  314  git add javascript-bank
+  315  git status
+  316  git commit -m "javascript-bank"
+  317  git push origin javascript-bank
+  318  git switch main 
+  319  git switch javascript-bank
+  320  git status 
+  321  git add javascript-bank
+  322  git commit -m "removed unused code" 
+  323  git push origin javascript-bank
+  324  git switch main
+  325  git pull origin main
+  326  git switch main
+  327  git pull origin main
+  328  git branch javascript-carousel
+  329  git switch javascript-carousel
+  330  git status
+  331  git add javascript-carousel
+  332  git status
+  333  git commit -m "update on javascript-carousel."
+  334  git status
+  335  git add javascript-carousel 
+  336  git status
+  337  git commit -m "update"
+  338  git switch main
+  339  git pull origin main
+  340  git branch practice-interview-problem-1
+  341  git switch practice-interview-problem-1
+  342  git status
+  343  git update practice-interview-problem-1
+  344  git add practice-interview-problem-1
+  345  git status
+  346  git commit -m "update"
+  347  git switch main
+  348  git switch main
+  349  git pull origin main
+  350  git branch http-messages
+  351  git switch http-messages
+  352  http http://www.example.com
+  353  http --verbose http://www.example.com
+  354  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  355  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  356  http --body GET https://example.com > http-messages/index.html
+  357  git status
+  358  git add http-messages
+  359  git status
+  360  git commit -m "Completed http-messages exercise"
+  361  git push origin http-messages
+  362  git switch main
+  363  git switch main
+  364  git pull origin main
+  365  git branch javascript-ajax
+  366  git switch javascript-ajax
+  367  git status
+  368  git add javascript-ajax
+  369  git status
+  370  git commit -m "completed javascript-ajax exercise."
+  371  git pull origin javascript-ajax
+  372  git push origin javascript-ajax
+  373  git switch main
+  374  git pull origin main
+  375  git switch main
+  376  http https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+  377  http https://api.adoptapet.com/search/pets_at_shelters?key=A34F48&v=1&output=xml&shelter_id=2342&shelter_id=17293&shelter_id=8323
+  378  http GET https://api.adoptapet.com/search/pets_at_shelters?key=A34F48&v=1&output=xml&shelter_id=2342&shelter_id=17293&shelter_id=8323
+  379  HTTP GET https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+  380  http GET https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+  381  HTTP GET https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+  382  http https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+  383  http https://api.spotify.com,
+  384  httphttps://api.funtranslations.com/t
+  385  http https://api.funtranslations.com/translate/
+  386  http https://example.com
+  387  http  https://api.spotify.com/v1.
+  388  http https://swapi.dev/api/planets/3/?format=json
+  389  http https://search.imdbot.workers.dev/?q=Niram
+  390  https://justwatch.imdbot.workers.dev/?q=Niram&L=en_IN
+  391  http https://justwatch.imdbot.workers.dev/?q=Niram&L=en_IN
+  392  http https://search.imdbot.workers.dev/
+  393  http https://swapi.dev/api/
+  394  http "https://swapi.dev/api/vehicles/"
+  395  "https://swapi.co/api/people/1/"
+  396  http "https://swapi.co/api/people/1/"
+  397  http https://swapi.dev/api/
+  398  "https://swapi.dev/api/people/"
+  399  http "https://swapi.dev/api/people/"
+  400  http http://dog-api.kinduff.com
+  401  http https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+  402  http https://pokeapi.co/api/v2/pokemon/ditto
+  403  https://api.agify.io?name=michael
+  404  http https://api.agify.io?name=michael
+  405  http http://www.7timer.info/bin/astro.php?lon=113.17&lat=23.09&ac=0&lang=en&unit=metric&output=internal&tzshift=0
+  406  https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/inception 2010
+  407  http https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/inception 2010
+  408  http https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/leon the professional
+  409  http https://imdb-api.com/API/Search/k_99uf6ywj/leon the professional
+  410  http https://imdb-api.com/API/Search/k_99uf6ywj/lost 2004
+  411  http https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/inception 2010
+  412  https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/inception 2010
+  413  http https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/inception
+  414  https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/star wars
+  415  http https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/star wars
+  416  http https://imdb-api.com/en/API/SearchMovie/k_99uf6ywj/star-wars
+  417  http 
+  418  star-wars
+  419  https://imdb-api.com/en/API/Search/k_99uf6ywj/star-wars
+  420  http https://imdb-api.com/en/API/Search/k_99uf6ywj/star-wars
+  421  http https://imdb-api.com/en/API/Search/k_99uf6ywj/indian-jones
+  422  http https://imdb-api.com/en/API/MostPopularMovies/k_99uf6ywj
+  423  http https://imdb-api.com/en/API/ComingSoon/k_99uf6ywj
+  424  http https://imdb-api.com/en/API/SearchName/k_99uf6ywj/Harrison Ford
+  425  http https://imdb-api.com/en/API/SearchName/k_99uf6ywj/Harrison-Ford
+  426  http https://imdb-api.com/en/API/SearchName/k_99uf6ywj/Natalie Portman
+  427  http https://imdb-api.com/en/API/SearchName/k_99uf6ywj/Natalie-Portman
+  428  http https://imdb-api.com/en/API/Top250Movies/k_99uf6ywj
+  429  http https://imdb-api.com/en/API/InTheaters/k_99uf6ywj
+  430  http https://imdb-api.com/en/API/Search/k_99uf6ywj/inception
+  431  http https://imdb-api.com/en/API/SearchSeries/k_99uf6ywj/star-wars
+  432  http 
+  433  tt12708542
+  434  https://imdb-api.com/en/API/UserRatings/k_99uf6ywj/tt12708542
+  435  http https://imdb-api.com/en/API/UserRatings/k_99uf6ywj/tt12708542
+  436  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?genres=action&sort=moviemeter,desc
+  437  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=star-wars&sort=moviemeter,desc
+  438  https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=taken&sort=moviemeter,desc
+  439  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=taken&sort=moviemeter,desc
+  440  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=John Wick&sort=moviemeter,desc
+  441  https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=John-Wick&sort=moviemeter,desc
+  442  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=John-Wick&sort=moviemeter,desc
+  443   
+  444  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=the-godfather
+  445  git switch main
+  446  git switch javascript-carousel
+  447  git status 
+  448  git add javascript-carousel
+  449  git status
+  450  git commit -m "Completed javascript-carousel exercise."
+  451  git status
+  452  git add javascript-carousel/main.js
+  453  git status
+  454  git commit -m "removed unused code"
+  455  git push origin javascript-carousel
+  456  git switch main
+  457  http https://imdb-api.com/API/SearchAl/k_99uf6ywj/?title=inception
+  458  https://imdb-api.com/API/SearchAl/k_99uf6ywj/?ti
+  459  http https://imdb-api.com/API/SearchAl/k_99uf6ywj/?title=inception
+  460  https://imdb-api.com/en/API/AdvancedSearch/k_99uf6ywj
+  461  http https://imdb-api.com/en/API/AdvancedSearch/k_99uf6ywj
+  462  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=Inception
+  463  http  https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?release_date=2024-01-01,2025-01-01
+  464  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=star wars
+  465  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=star-wars
+  466  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=mandelorian
+  467  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=the-mandelorean
+  468  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=succession
+  469  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix
+  470   http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&sort=moviemeter,desc
+  471  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&sort=boxoffice_gross_us,desc
+  472  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&sort=boxoffice_gross_us,asc
+  473  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&sort=runtime,desc
+  474  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&sort=runtime,desc
+  475  https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&moviemeter=1,1
+  476  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&moviemeter=1,1
+  477  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&num_votes=1000,
+  478  https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&num_votes=10000,
+  479  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&num_votes=10000,
+  480  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&num_votes=10000,
+  481  http https://imdb-api.com/en/API/Top250TVs/k_99uf6ywj
+  482  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=matrix&num_votes=10000,
+  483  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj/?genres=action,adventure
+  484  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=star-wars&groups=top_1000
+  485  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj/?title_type=feature,tv_movie,tv_special,documentary,short,video&num_votes=5000,&genres=action&runtime=100,&sort=user_rating,desc
+  486   http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=simpson
+  487  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?groups=top_100
+  488  git switch main
+  489  git switch object-manipulation-2
+  490  git status
+  491  git add .
+  492  git status
+  493  git commit -m "deleted all comments. Only left pseudocode." 
+  494  git push origin object-manipulation-2
+  495  git switch main
+  496  https://imdb-api.com/API/SearchAl/k_99uf6ywj/?title=inception
+  497  http https://imdb-api.com/API/SearchAl/k_99uf6ywj/?title=inception
+  498  http https://imdb-api.com/API/SearchAl/k_99uf6ywj/?title=inception
+  499  http https://imdb-api.com/API/AdvancedSearch/k_99uf6ywj?title=Inception
+  500  git switch practice-interview-problem-1
+  501  git switch main
+  502  git switch javascript-carousel
+  503  git status
+  504  git status
+  505  git add .
+  506  git status
+  507  git commit -m "removed setTimeout and only used clearInterval" 
+  508  git push origin javascript-carousel
+  509  git switch main
+  510  git pull origin main
+  511  git status
+  512  git branch es6-const-let
+  513  git switch es6-const-let
+  514  git status
+  515  git add .
+  516  git status
+  517  git add es6-const-let
+  518  git commit -m " Completed es6-const-let"
+  519  git push origin es5-const-let
+  520  git push origin es6-const-let
+  521  git switch main
+  522  git pull origin main
+  523  git status
+  524  git pull origin main
+  525  git switch main
+  526  git branch es6-template-literals
+  527  git switch es6-template-literals
+  528  git status
+  529  git add .
+  530  git commit -m "completed es6-template-literals"
+  531  git push origin es6-template-literals
+  532  git switch main
+  533  git pull origin main
+  534  git branch es6-destructuring 
+  535  git switch es6-destructuring
+  536  git status
+  537  git add .
+  538  git status
+  539  git commit -m "completed es6-destructuring" 
+  540  git push origin es6-destructuring 
+  541  git switch main
+  542  git pull origin main
+  543  git status
+  544  git switch main
+  545  git pull origin main
+  546  git branch es6-arrow-functions 
+  547  git switch es6-arrow-functions
+  548  git status
+  549  git add es6-arrow-functions
+  550  git status
+  551  git push origin es6-arrow-functions
+  552  git commit -m "completed es6-arrow-functions" 
+  553  git push origin es6-arrow-functions 
+  554  git switch main
+  555  git status
+  556  git pull origin main 
+  557  git status
+  558  git add . 
+  559  git status
+  560  git status
+  561  git pull origin main
+  562  git branch command-line-basics
+  563  git switch command-line-basics
+  564  cd command-line-basics
+  565  man cat 
+  566  man cat
+  567  man cat laziness.txt
+  568  cat laziness.txt
+  569  cat impatience.txt
+  570  cat hubris.txt
+  571  man cat
+  572  cat laziness.text impatience.txt hubris.txt
+  573  cat laziness.txt impatience.txt hubris.txt
+  574  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  575  cat three-virtues.txt
+  576  man ls 
+  577  ls command-line-basics
+  578  man ls
+  579  ls 
+  580  ls -a
+  581  ls -F
+  582  man ls
+  583  ls -aF lfz-staff > lfz-staff/contents.txt
+  584  cat contents.txt
+  585  cat lfz-staff/contents.txt
+  586  man pwd
+  587  pwd
+  588  pwd > i-was-here.txt
+  589  ls
+  590  cat i-was-here.txt
+  591  man echo 
+  592  echo 'Hello, World!'
+  593  echo 'Hello, World!' > hello.txt
+  594  ls 
+  595  cat hello.txt
+  596  man touch 
+  597  touch tag-youre-it.txt
+  598  touch snoot/boop.txt
+  599  ls snoot/
+  600  man touch
+  601  man mkdir
+  602  mkdir pareent
+  603  man mkdir
+  604  mdkir -p parent
+  605  mkdir parent
+  606  mkdir -p parent
+  607  mkdir -p parent/child
+  608  mkdir -p child/grandchild
+  609  mkdir -p parent/child/grandchild
+  610  man touch
+  611  touch parent/child/grandchild/.gitkeep
+  612  ls -a
+  613  man mv
+  614  man mv
+  615  mv pokiemans pokemon
+  616  ls 
+  617  man rm
+  618  rm lol.txt
+  619  ls 
+  620  man rm
+  621  rm -r kill-me/
+  622  ls
+  623  man cp
+  624  cp and-then.txt
+  625  cp and-then.txt no-and-then.txt
+  626  ls
+  627  cat and-then.txt
+  628  cat no-and-then.txt
+  629  man history
+  630  history 
+  631  history > command-history.txt
