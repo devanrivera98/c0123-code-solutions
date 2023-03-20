@@ -7,13 +7,13 @@ const dataParse = JSON.parse(data);
 
 // Add is below
 const message = process.argv[3];
-let dataNextId = dataParse.nextId;
+const dataNextId = dataParse.nextId;
 
 function create() {
   readFile('data.json')
     .then((success) => {
       dataParse.notes[dataNextId] = message;
-      dataNextId++;
+      dataParse.nextId++;
       const dataStringify = JSON.stringify(dataParse, null, 2);
       console.log(dataStringify);
       writeFile('data.json', dataStringify).then((success) => {

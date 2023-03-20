@@ -5,7 +5,6 @@ export default read;
 const data = readFileSync('data.json', 'utf-8');
 const dataParse = JSON.parse(data);
 
-console.log(dataParse);
 function read() {
   readFile('data.json')
     .then((data) => {
@@ -18,5 +17,3 @@ function read() {
       process.exit(1);
     });
 }
-
-read();
