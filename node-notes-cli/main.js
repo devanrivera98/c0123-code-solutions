@@ -20,6 +20,7 @@ switch (operator) {
     break;
   case 'update':
     update();
+    console.log('Case update is being displayed');
     break;
   default:
     console.log(`Sorry, ${operator} is not a valid operator`);

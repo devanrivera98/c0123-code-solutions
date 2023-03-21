@@ -15,7 +15,6 @@ function create() {
       dataParse.notes[dataNextId] = message;
       dataParse.nextId++;
       const dataStringify = JSON.stringify(dataParse, null, 2);
-      console.log(dataStringify);
       writeFile('data.json', dataStringify).then((success) => {
         console.log('create was successfully stringified');
       });

@@ -7,7 +7,6 @@ const dataParse = JSON.parse(data);
 
 const number = process.argv[3];
 const message = process.argv[4];
-// const dataNextId = dataParse.nextId;
 
 function update() {
   readFile('data.json')
@@ -16,7 +15,6 @@ function update() {
         if (number === property) {
           dataParse.notes[property] = message;
           const dataStringify = JSON.stringify(dataParse, null, 2);
-          console.log(dataStringify);
           writeFile('data.json', dataStringify).then((success) => {
             console.log('create was successfully stringified');
           });
@@ -28,6 +26,3 @@ function update() {
       process.exit(1);
     });
 }
-
-// const dataNextId = dataParse.nextId;
-// const newObject = Object.assign(dataParse.notes, { dataNextId: message });

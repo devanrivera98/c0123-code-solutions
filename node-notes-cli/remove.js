@@ -13,7 +13,6 @@ function remove() {
         if (number === property) {
           delete dataParse.notes[property];
           const dataStringify = JSON.stringify(dataParse, null, 2);
-          console.log(dataStringify);
           writeFile('data.json', dataStringify).then((success) => {
           });
         }
