@@ -11,12 +11,7 @@ function remove() {
     .then((data) => {
       for (const property in dataParse.notes) {
         if (number === property) {
-          console.log('this is the property', property);
-          console.log('dataParse', dataParse);
-          console.log(dataParse.notes);
-          delete dataParse.notes['11'];
-          // potentially deleted the json but it is still in the file?
-          // `${property}: ${dataParse.notes[property]}`;
+          delete dataParse.notes[property];
           const dataStringify = JSON.stringify(dataParse, null, 2);
           console.log(dataStringify);
           writeFile('data.json', dataStringify).then((success) => {

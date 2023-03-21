@@ -1,7 +1,7 @@
 import read from './read.js';
 import create from './create.js';
 import remove from './remove.js';
-// import update from './update.js';
+import update from './update.js';
 
 const operator = process.argv[2];
 
@@ -17,6 +17,9 @@ switch (operator) {
   case 'remove':
     remove();
     console.log('Case remove is being displayed');
+    break;
+  case 'update':
+    update();
     break;
   default:
     console.log(`Sorry, ${operator} is not a valid operator`);
