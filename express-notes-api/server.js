@@ -49,11 +49,14 @@ app.post('/api/notes', (req, res) => {
   if (newEntry.content === undefined) {
     const errorMessage = { error: 'Content is a required field' };
     res.status(404).json(errorMessage);
-  } else {
+  } else if (newEntry.content !== undefined) {
     newEntry.id = dataParse.nextId;
     dataParse.nextId++;
     console.log(newEntry);
     res.status(201).json(newEntry);
+  } else {
+    const errorMessage = { error: 'An unexpected error occured' };
+    res.status(500).json(errorMessage);
   }
 });
 
