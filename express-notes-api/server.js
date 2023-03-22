@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 const app = express();
 const data = readFileSync('data.json', 'utf-8');
 const dataParse = JSON.parse(data);
+const errorCode = { error: 'id must be a positive integer' };
 
 readFile('data.json')
   .then((success) => {
@@ -12,8 +13,9 @@ readFile('data.json')
       const allNotes = [];
       for (const [key] of Object.entries(dataParse.notes)) {
         allNotes.push(dataParse.notes[key]);
+        // console.log(dataParse.notes[key].id);
       }
-      console.log(allNotes);
+      // console.log(allNotes);
       res.status(200).json(allNotes);
     });
   })
@@ -22,9 +24,25 @@ readFile('data.json')
     process.exit(1);
   });
 
-// app.get('/api/grades:id', (req, res) => {
-//   if (!req.params.id >= 0) {
-//     res.statusCode(400).json('The id was not a positive integer');
+app.get('/api/notes/:id', (req, res) => {
+  if (Number(req.params.id) < 0) {
+    console.log(Number(req.params.id));
+    res.status(400).json(errorCode);
+  }
+});
+
+// app.get('/api/notes/:id', (req, res) => {
+//   if (Number(req.params.id) < 0) {
+//     console.log(Number(req.params.id));
+//     res.status(400).json('The id was not a positive integer');
+//   }
+//   for (const [key] of Object.entries(dataParse.notes)) {
+//     if (req.params.id === dataParse.notes[key].id) {
+//       console.log('The right number was picked');
+//       const specificId = dataParse.notes[key];
+//       console.log(specificId);
+//       res.status(200).json(dataParse.notes);
+//     }
 //   }
 // });
 
