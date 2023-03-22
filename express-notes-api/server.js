@@ -25,26 +25,15 @@ readFile('data.json')
   });
 
 app.get('/api/notes/:id', (req, res) => {
-  if (Number(req.params.id) < 0) {
+  const numberId = Number(req.params.id);
+  if (numberId <= 0) {
     console.log(Number(req.params.id));
     res.status(400).json(errorCode);
   }
+  if (dataParse.notes[numberId]) {
+    res.status(200).json(dataParse.notes[numberId]);
+  }
 });
-
-// app.get('/api/notes/:id', (req, res) => {
-//   if (Number(req.params.id) < 0) {
-//     console.log(Number(req.params.id));
-//     res.status(400).json('The id was not a positive integer');
-//   }
-//   for (const [key] of Object.entries(dataParse.notes)) {
-//     if (req.params.id === dataParse.notes[key].id) {
-//       console.log('The right number was picked');
-//       const specificId = dataParse.notes[key];
-//       console.log(specificId);
-//       res.status(200).json(dataParse.notes);
-//     }
-//   }
-// });
 
 app.listen(8080, () => {
   console.log('Listening on port 8080');
