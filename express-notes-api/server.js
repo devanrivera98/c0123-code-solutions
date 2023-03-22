@@ -27,11 +27,12 @@ readFile('data.json')
 app.get('/api/notes/:id', (req, res) => {
   const numberId = Number(req.params.id);
   if (numberId <= 0) {
-    console.log(Number(req.params.id));
     res.status(400).json(errorCode);
-  }
-  if (dataParse.notes[numberId]) {
+  } else if (dataParse.notes[numberId]) {
     res.status(200).json(dataParse.notes[numberId]);
+  } else {
+    const errorMessage = { error: `Cannot find note with id ${numberId}` };
+    res.status(404).json(errorMessage);
   }
 });
 
