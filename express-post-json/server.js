@@ -4,6 +4,8 @@ const app = express();
 let nextId = 1;
 const grades = {};
 
+app.use(express.json());
+
 app.get('/api/grades', (req, res) => {
   const allGrades = [];
   for (const property in grades) {
@@ -12,14 +14,12 @@ app.get('/api/grades', (req, res) => {
   res.json(allGrades);
 });
 
-app.use(express.json());
-
 app.post('/api/grades', (req, res) => {
   const eachGrade = req.body;
   eachGrade.id = nextId;
   grades[nextId] = eachGrade;
   nextId++;
-  res.status(201).json(grades);
+  res.status(201).json(eachGrade);
 });
 
 app.listen(8080, () => {
