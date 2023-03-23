@@ -5,6 +5,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 const app = express();
 const data = readFileSync('data.json', 'utf-8');
 const dataParse = JSON.parse(data);
+const errorCodeNegative = { error: 'id must be a positive integer' };
+const errorMessage = { error: 'An unexpected error occured' };
 app.use(express.json());
 
 // GET STARTS BELOW
@@ -29,13 +31,12 @@ readFile('data.json')
 app.get('/api/notes/:id', (req, res) => {
   const numberId = Number(req.params.id);
   if (numberId <= 0) {
-    const errorCode = { error: 'id must be a positive integer' };
-    res.status(400).json(errorCode);
+    res.status(400).json(errorCodeNegative);
   } else if (dataParse.notes[numberId]) {
     res.status(200).json(dataParse.notes[numberId]);
   } else {
-    const errorMessage = { error: `Cannot find note with id ${numberId}` };
-    res.status(404).json(errorMessage);
+    const errorMessageNoId = { error: `Cannot find note with id ${numberId}` };
+    res.status(404).json(errorMessageNoId);
   }
 });
 
@@ -62,6 +63,36 @@ app.post('/api/notes', (req, res) => {
     const errorMessage = { error: 'An unexpected error occured' };
     res.status(500).json(errorMessage);
   }
+});
+// POST ENDS HERE
+
+// DELETE STARTS HERE
+
+app.delete('/api/notes/:id', (req, res) => {
+  const entryId = Number(req.params.id);
+  console.log(entryId);
+  console.log(dataParse.notes[entryId]);
+  if (entryId <= 0) {
+    res.status(400).json(errorCodeNegative);
+  } else if (entryId !== dataParse.notes[entryId].id) {
+    res.status(404).json(errorMessage);
+  } else if (entryId === dataParse.notes[entryId].id) {
+    console.log('delete?');
+    delete dataParse.notes[entryId];
+    console.log(dataParse.notes);
+    res.status(204).json(dataParse);
+    const dataStringify = JSON.stringify(dataParse, null, 2);
+    writeFile('data.json', dataStringify)
+      .then((success) => {
+        console.log('Note was successfully deleted');
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }
+  // const numberId = Number(req.params.id);
+  // // console.log(dataParse.note[numberId]);
+  // res.status(204).json(dataParse.note[numberId]);
 });
 
 app.listen(8080, () => {
