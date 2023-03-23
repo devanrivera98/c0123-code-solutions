@@ -1,10 +1,11 @@
 import express from 'express';
 import { readFileSync } from 'node:fs';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 const app = express();
 const data = readFileSync('data.json', 'utf-8');
 const dataParse = JSON.parse(data);
+app.use(express.json());
 
 // GET STARTS BELOW
 
@@ -40,8 +41,6 @@ app.get('/api/notes/:id', (req, res) => {
 
 // GET ENDS HERE
 
-app.use(express.json());
-
 // POST STARTS BELOW
 app.post('/api/notes', (req, res) => {
   const newEntry = req.body;
@@ -51,9 +50,14 @@ app.post('/api/notes', (req, res) => {
     res.status(404).json(errorMessage);
   } else if (newEntry.content !== undefined) {
     newEntry.id = dataParse.nextId;
+    dataParse.notes[dataParse.nextId] = newEntry;
     dataParse.nextId++;
-    console.log(newEntry);
+    console.log(dataParse);
     res.status(201).json(newEntry);
+    const dataStringify = JSON.stringify(dataParse, null, 2);
+    writeFile('data.json', dataStringify).then((success) => {
+      console.log('Content was saved');
+    });
   } else {
     const errorMessage = { error: 'An unexpected error occured' };
     res.status(500).json(errorMessage);
@@ -63,3 +67,12 @@ app.post('/api/notes', (req, res) => {
 app.listen(8080, () => {
   console.log('Listening on port 8080');
 });
+
+// res.status(404).json(errorMessage);
+//   } else if (newEntry.content !== undefined) {
+//   newEntry.id = dataParse.nextId;
+//   dataParse.nextId++;
+//   console.log(newEntry);
+//   res.status(201).json(newEntry);
+//   // writeFile()
+// }
