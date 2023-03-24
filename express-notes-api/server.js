@@ -17,9 +17,7 @@ readFile('data.json')
       const allNotes = [];
       for (const [key] of Object.entries(dataParse.notes)) {
         allNotes.push(dataParse.notes[key]);
-        // console.log(dataParse.notes[key].id);
       }
-      // console.log(allNotes);
       res.status(200).json(allNotes);
     });
   })
@@ -45,7 +43,6 @@ app.get('/api/notes/:id', (req, res) => {
 // POST STARTS BELOW
 app.post('/api/notes', (req, res) => {
   const newEntry = req.body;
-  // console.log(newEntry.content);
   if (newEntry.content === undefined) {
     const errorMessage = { error: 'Content is a required field' };
     res.status(404).json(errorMessage);
@@ -56,9 +53,14 @@ app.post('/api/notes', (req, res) => {
     console.log(dataParse);
     res.status(201).json(newEntry);
     const dataStringify = JSON.stringify(dataParse, null, 2);
-    writeFile('data.json', dataStringify).then((success) => {
-      console.log('Content was saved');
-    });
+    writeFile('data.json', dataStringify)
+      .then((success) => {
+        console.log('Content was saved');
+      })
+      .catch((error) => {
+        console.log(error.message);
+        process.exit(1);
+      });
   } else {
     res.status(500).json(errorMessage);
   }
@@ -69,7 +71,6 @@ app.post('/api/notes', (req, res) => {
 
 app.delete('/api/notes/:id', (req, res) => {
   const entryId = Number(req.params.id);
-  // console.log(entryId);
   if (entryId <= 0) {
     res.status(400).json(errorCodeNegative);
   } else if (entryId !== dataParse.notes[entryId].id) {
@@ -85,18 +86,18 @@ app.delete('/api/notes/:id', (req, res) => {
       })
       .catch((error) => {
         console.log(error.message);
+        process.exit(1);
       });
   } else {
     res.status(500).json(errorMessage);
   }
 });
+// DELETE ENDS HERE
 
+// PUT STARTS HERE
 app.put('/api/notes/:id', (req, res) => {
   const entryId = Number(req.params.id);
-  // console.log('dataParse', dataParse.notes[entryId]);
-  // console.log('entryId', entryId);
   const updateEntry = req.body;
-  // console.log(updateEntry);
   if (entryId <= 0 || updateEntry.content === undefined) {
     res.status(400).json(errorCodeNegative);
   } else if (dataParse.notes[entryId] === undefined) {
@@ -105,9 +106,7 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (dataParse.notes[entryId].id === entryId) {
     updateEntry.id = entryId;
     dataParse.notes[entryId] = updateEntry;
-    // console.log('update successful', dataParse.notes);
-    const successMessage = { success: 'Update was successful' };
-    res.status(204).json(successMessage);
+    res.status(204).json(updateEntry);
     const dataStringify = JSON.stringify(dataParse, null, 2);
     writeFile('data.json', dataStringify)
       .then((success) => {
@@ -115,21 +114,14 @@ app.put('/api/notes/:id', (req, res) => {
       })
       .catch((error) => {
         console.log(error.message);
+        process.exit(1);
       });
   } else {
     res.status(500).json(errorMessage);
   }
 });
+// PUT ENDS HERE
 
 app.listen(8080, () => {
   console.log('Listening on port 8080');
 });
-
-// res.status(404).json(errorMessage);
-//   } else if (newEntry.content !== undefined) {
-//   newEntry.id = dataParse.nextId;
-//   dataParse.nextId++;
-//   console.log(newEntry);
-//   res.status(201).json(newEntry);
-//   // writeFile()
-// }
