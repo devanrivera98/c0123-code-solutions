@@ -50,10 +50,16 @@ app.post('/api/grades', async (req, res) => {
     const sql = `
     select *
       from "grades"
+      where "name" = $1
+      AND "course" = $2
+      AND "score" = $3
     `;
     console.log(sql);
+    // const params = [newEntryName, newEntryCourse, newEntryScore];
+    // const result = await db.query(sql, params);
+    // const newGrade = result.rows[0];
   } catch {
-    // console.error(error);
+    // console.error(err);
     // res.status(500).json(error.message);
   }
 });
