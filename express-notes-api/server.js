@@ -49,8 +49,8 @@ app.post('/api/notes', (req, res) => {
         console.log('Content was saved');
       })
       .catch((error) => {
-        res.status(500).json(error);
-        process.exit(1);
+        console.error(error);
+        res.status(500).json(error.message);
       });
   }
 });
@@ -74,8 +74,8 @@ app.delete('/api/notes/:id', (req, res) => {
         console.log('Note was successfully deleted');
       })
       .catch((error) => {
-        res.status(500).json(error);
-        process.exit(1);
+        console.error(error);
+        res.status(500).json(error.message);
       });
   }
 });
@@ -100,8 +100,8 @@ app.put('/api/notes/:id', (req, res) => {
         console.log('Note was successfully updated');
       })
       .catch((error) => {
-        res.status(500).json(error.errorMessage);
-        process.exit(1);
+        console.error(error);
+        res.status(500).json(error.message);
       });
   }
 });
