@@ -60,7 +60,6 @@ app.post('/api/notes', (req, res) => {
       console.log('Content was saved');
     });
   } else {
-    const errorMessage = { error: 'An unexpected error occured' };
     res.status(500).json(errorMessage);
   }
 });
@@ -70,16 +69,14 @@ app.post('/api/notes', (req, res) => {
 
 app.delete('/api/notes/:id', (req, res) => {
   const entryId = Number(req.params.id);
-  console.log(entryId);
-  console.log(dataParse.notes[entryId]);
+  // console.log(entryId);
   if (entryId <= 0) {
     res.status(400).json(errorCodeNegative);
   } else if (entryId !== dataParse.notes[entryId].id) {
-    res.status(404).json(errorMessage);
+    const errorMessageNoId = { error: `Cannot find note with id ${entryId}` };
+    res.status(404).json(errorMessageNoId);
   } else if (entryId === dataParse.notes[entryId].id) {
-    console.log('delete?');
     delete dataParse.notes[entryId];
-    console.log(dataParse.notes);
     res.status(204).json(dataParse);
     const dataStringify = JSON.stringify(dataParse, null, 2);
     writeFile('data.json', dataStringify)
@@ -89,10 +86,39 @@ app.delete('/api/notes/:id', (req, res) => {
       .catch((error) => {
         console.log(error.message);
       });
+  } else {
+    res.status(500).json(errorMessage);
   }
-  // const numberId = Number(req.params.id);
-  // // console.log(dataParse.note[numberId]);
-  // res.status(204).json(dataParse.note[numberId]);
+});
+
+app.put('/api/notes/:id', (req, res) => {
+  const entryId = Number(req.params.id);
+  // console.log('dataParse', dataParse.notes[entryId]);
+  // console.log('entryId', entryId);
+  const updateEntry = req.body;
+  // console.log(updateEntry);
+  if (entryId <= 0 || updateEntry.content === undefined) {
+    res.status(400).json(errorCodeNegative);
+  } else if (dataParse.notes[entryId] === undefined) {
+    const errorMessageNoId = { error: `Cannot find note with id ${entryId}` };
+    res.status(404).json(errorMessageNoId);
+  } else if (dataParse.notes[entryId].id === entryId) {
+    updateEntry.id = entryId;
+    dataParse.notes[entryId] = updateEntry;
+    // console.log('update successful', dataParse.notes);
+    const successMessage = { success: 'Update was successful' };
+    res.status(204).json(successMessage);
+    const dataStringify = JSON.stringify(dataParse, null, 2);
+    writeFile('data.json', dataStringify)
+      .then((success) => {
+        console.log('Note was successfully updated');
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  } else {
+    res.status(500).json(errorMessage);
+  }
 });
 
 app.listen(8080, () => {
