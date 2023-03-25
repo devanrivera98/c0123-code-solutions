@@ -1,15 +1,15 @@
 /* eslint-disable no-undef -- Shape is imported by .html */
 /* exported Square */
 class Square extends Shape {
-  constructor(area, circumference, width) {
-    super(area, circumference);
+  constructor(width) {
+    super(width * width, width * 4);
     this.width = width;
   }
 
   print() {
-    console.log(`The width of the Square is ${this.width}`);
+    return `${super.print()}, width: ${this.width}`;
   }
 }
 
-const newSquare = new Square(0, 0, 3);
-newSquare.print();
+const newSquare = new Square(3);
+console.log(newSquare.print());
