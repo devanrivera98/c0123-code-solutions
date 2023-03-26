@@ -39,28 +39,29 @@ app.post('/api/grades', async (req, res) => {
   try {
     const newEntryName = req.body.name;
     const newEntryCourse = req.body.course;
-    const newEntryScore = req.body.score;
+    const newEntryScore = Number(req.body.score);
     if (newEntryCourse === undefined || newEntryName === undefined || newEntryScore === undefined) {
-      const errorMessage = { error: 'Field left empty' };
+      const errorMessage = { error: 'A field was left empty' };
       res.status(400).json(errorMessage);
+      return;
     } else if (newEntryScore < 0 || newEntryScore > 100) {
       const errorMessage = { error: 'Score entered is above 100 or below 0' };
       res.status(400).json(errorMessage);
+      return;
     }
     const sql = `
-    select *
-      from "grades"
-      where "name" = $1
-      AND "course" = $2
-      AND "score" = $3
+    Insert into "grades" ("name", "course", "score")
+      values ($1, $2, $3)
+      Returning*
     `;
-    console.log(sql);
-    // const params = [newEntryName, newEntryCourse, newEntryScore];
-    // const result = await db.query(sql, params);
-    // const newGrade = result.rows[0];
-  } catch {
-    // console.error(err);
-    // res.status(500).json(error.message);
+    const params = [newEntryName, newEntryCourse, newEntryScore];
+    const result = await db.query(sql, params);
+    const newGrade = result.rows[0];
+    console.log(newGrade);
+    res.json(newGrade);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'An unexpected error occurred' });
   }
 });
 
