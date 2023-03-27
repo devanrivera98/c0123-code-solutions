@@ -133,7 +133,7 @@ app.put('/api/grades/:gradeId', async (req, res) => {
     const result = await db.query(sql, params);
     const grade = result.rows[0];
     if (grade) {
-      res.status(204).json(grade);
+      res.status(201).json(grade);
     } else {
       res.status(404).json({ error: `Cannot find grade with "gradeId"${gradeId}` });
     }
