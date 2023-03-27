@@ -74,8 +74,8 @@ app.delete('/api/grades/:gradeId', async (req, res) => {
       const errorMessage = { error: 'GradeId was not a number' };
       res.status(400).json(errorMessage);
       return;
-    } else if (gradeId < 0 || gradeId > 100) {
-      const errorMessage = { error: 'Score entered is above 100 or below 0' };
+    } else if (gradeId < 0) {
+      const errorMessage = { error: 'GradeId is below 0' };
       res.status(400).json(errorMessage);
       return;
     }
@@ -102,36 +102,48 @@ app.delete('/api/grades/:gradeId', async (req, res) => {
 
 // // DELETE ENDS HERE
 
+// PUT STARTS HERE
+app.put('/api/grades/:gradeId', async (req, res) => {
+  try {
+    const name = req.body.name;
+    const course = req.body.course;
+    const score = Number(req.body.score);
+    const gradeId = Number(req.params.gradeId);
+    if (name === undefined || course === undefined || score === undefined) {
+      const errorMessage = { error: 'A field was left empty' };
+      res.status(400).json(errorMessage);
+      return;
+    } else if (score < 0 || score > 100) {
+      const errorMessage = { error: 'Score entered is above 100 or below 0' };
+      res.status(400).json(errorMessage);
+      return;
+    } else if (Number.isNaN(gradeId) || gradeId < 0) {
+      res.status(400).json({ error: 'There was an issue with the gradeId inputted' });
+    }
+    const sql = `
+    Update "grades"
+      set "name" = $1,
+          "course" = $2,
+          "score" = $3
+      where "gradeId" = $4
+      Returning *
+    `;
+    console.log(sql);
+    const params = [name, course, score, gradeId];
+    const result = await db.query(sql, params);
+    const grade = result.rows[0];
+    if (grade) {
+      res.status(204).json(grade);
+    } else {
+      res.status(404).json({ error: `Cannot find grade with "gradeId"${gradeId}` });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'An unexpected error occurred' });
+  }
+});
+// PUT ENDS HERE
+
 app.listen(8080, () => {
   console.log('Listening on port 8080');
 });
-
-// // PUT STARTS HERE
-// app.put('/api/notes/:id', (req, res) => {
-//   const entryId = Number(req.params.id);
-//   const updateEntry = req.body;
-//   if (entryId <= 0 || updateEntry.content === undefined) {
-//     res.status(400).json(errorCodeNegative);
-//   } else if (dataParse.notes[entryId] === undefined) {
-//     const errorMessageNoId = { error: `Cannot find note with id ${entryId}` };
-//     res.status(404).json(errorMessageNoId);
-//   } else {
-//     updateEntry.id = entryId;
-//     dataParse.notes[entryId] = updateEntry;
-//     const dataStringify = JSON.stringify(dataParse, null, 2);
-//     writeFile('data.json', dataStringify)
-//       .then((success) => {
-//         res.status(204).json(updateEntry);
-//         console.log('Note was successfully updated');
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//         res.status(500).json(error.message);
-//       });
-//   }
-// });
-// // PUT ENDS HERE
-
-// app.listen(8080, () => {
-//   console.log('Listening on port 8080');
-// });
