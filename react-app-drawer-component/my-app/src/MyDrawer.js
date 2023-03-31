@@ -5,13 +5,10 @@ import { useState } from 'react';
 
 export default function MyDrawer({menuHeading, menuList}) {
   const [isActive, setIsActive] = useState(true)
+  // const [current, setCurrent] = useState('this')
 
   function handleClick() {
     setIsActive(!isActive)
-  }
-
-  function handleEmptySpace() {
-    setIsActive(true)
   }
 
   const menuItemsList = menuList.map(menuList =>
@@ -22,7 +19,12 @@ export default function MyDrawer({menuHeading, menuList}) {
   return (
     <>
     {isActive ?
-    (<Bars onCustomClick={handleClick}></Bars>) :
+        (<div className='bar-page'>
+          <Bars onCustomClick={handleClick}></Bars>
+          <div className='item-selected'>
+            <h1>here</h1>
+          </div>
+        </div> ) :
     (<>
     <div className='pop-up'>
       <div onClick={handleClick} className='menu'>{menuHeading}</div>
@@ -30,7 +32,7 @@ export default function MyDrawer({menuHeading, menuList}) {
         <ul onClick={handleClick}>{menuItemsList}</ul>
       </div>
     </div>
-    <div onClick={handleEmptySpace} className='everything-else' />
+      <div id='overlay' onClick={handleClick}></div>
     </>
     )}
     {/* <div className="pop-up">

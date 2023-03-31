@@ -1,5 +1,4 @@
 import MyDrawer from './MyDrawer';
-import { Bars } from './MyDrawer'
 import './App.css';
 
 function App() {
