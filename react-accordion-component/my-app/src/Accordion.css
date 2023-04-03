@@ -1,0 +1,22 @@
+.all-topics {
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.each-topic {
+  background-color: lightgrey;
+  border-style: solid;
+  border-color: black;
+}
+
+.each-paragraph {
+  width: 300px;
+}
+
+.container {
+  border-style: solid;
+  border-color: black;
+}
