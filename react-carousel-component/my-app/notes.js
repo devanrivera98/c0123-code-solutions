@@ -19,6 +19,29 @@
 //   </div>
 //     </body >
 
+// React Layout
+
+// function Layout() {
+//   return (
+//     <>
+//     <div className="row">
+//       <div className="holder">
+//         <FaLessThan className="arrows fa-solid fa-less-than" />
+//           <img src={pikachu} alt="Pikachu" />
+//         <FaGreaterThan className="arrows fa-solid fa-greater-than" />
+//       </div>
+//       <div className="selector">
+//         <FaCircle className="one circle fa-sharp fa-solid fa-circle" />
+//         <FaCircle className="two circle fa-sharp fa-solid fa-circle" />
+//         <FaCircle className="three circle fa-sharp fa-solid fa-circle" />
+//         <FaCircle className="four circle fa-sharp fa-solid fa-circle" />
+//       </div>
+//     </div>
+//     </>
+//    )
+// }
+//REACT LAYOUT ENDS HERE
+
 
 // // STEPS TO TAKE
 // 1. Seperate components by functionality
