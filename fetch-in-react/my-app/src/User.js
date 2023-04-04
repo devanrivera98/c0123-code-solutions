@@ -14,22 +14,23 @@ export default function User({ userId, onCancel }) {
       try {
         const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
         const jsonData = await response.json();
-        if (!ignore) {
+        if (!ignore && response.ok) {
           console.log('My jsonData:', jsonData)
           setIsLoading(false)
           return setUser(jsonData)
         }
-        throw new Error('There was an error', error)
+        throw new Error('There was an error');
       }
-      catch {
-        setError(true)
+      catch (err) {
+        setError(err)
+        setIsLoading(false)
       }
       return () => {
         ignore = true;
       }
     }
     fetchList()
-  }, [error, userId])
+  }, [userId])
 
   if (isLoading) {
     return <p>Loading...</p>;

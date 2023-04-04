@@ -15,24 +15,25 @@ export default function Users() {
     async function fetchList() {
       let ignore = false;
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const response = await fetch('https://sonplaceholder.typicode.com/users');
         const jsonData = await response.json();
-        if (!ignore) {
+        if (!ignore && response.ok) {
           console.log('My jsonData:', jsonData)
           setIsLoading(false)
           return setUsers(jsonData)
         }
-        throw new Error('There was an error', error)
+        throw new Error('There was an error')
       }
-      catch {
-        setError(true)
+      catch (err) {
+        setError(err)
+        setIsLoading(false)
       }
       return () => {
         ignore = true;
       }
     }
     fetchList()
-  }, [error])
+  }, [])
 
 
   if (isLoading) {
