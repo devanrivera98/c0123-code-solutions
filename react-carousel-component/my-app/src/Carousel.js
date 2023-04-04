@@ -1,15 +1,15 @@
-import { FaCircle, FaRegCircle, FaLessThan, FaGreaterThan } from 'react-icons/fa'
-import { useState, useEffect } from "react";
+import { FaRegCircle, FaLessThan, FaGreaterThan } from 'react-icons/fa'
+import { useState} from "react";
 import './Carousel.css'
 import readItems from './PokemonList';
-import pikachu from "./images/025.png"
+
 
 readItems();
 
 export default function Carousel({url, name, characterList}) {
   const [current, setCurrent] = useState(0)
-  const [attribute, setAttribute] = useState()
-  const [photo, setPhoto] = useState()
+  // const [attribute, setAttribute] = useState()
+  // const [photo, setPhoto] = useState()
 
   // useEffect(() => {
   //   readItems()
@@ -24,20 +24,20 @@ export default function Carousel({url, name, characterList}) {
 
   // })
 
-  function handleClick() {
+  // function handleClick() {
 
-  }
+  // }
 
   return (
     <>
     <div className='row'>
       <div className='holder'>
         <LeftArrow />
-        <img alt={attribute} src= {characterList[0].url} />
+        <img alt={characterList[0].name} src= {characterList[0].url} />
         <RightArrow />
       </div>
       <div className='selector'>
-        <Buttons count={characterList.length}/>
+        <Buttons current={current} onCustomClickShow={(index) => setCurrent(index)} count={characterList.length}/>
       </div>
     </div>
     </>
@@ -52,14 +52,16 @@ function LeftArrow({onCustomClick}) {
   return (<FaLessThan className='arrows' />)
 }
 
-function Buttons({onCustomClickShow, count}) {
+function Buttons({onCustomClickShow, count, current}) {
   const buttons = []
 
   for (let i = 0; i < count; i++) {
     buttons.push(
       <EachButton
       key={i}
+      name={i}
       onCustomClick ={() => onCustomClickShow(i)}
+      bkg={i === current ? 'black' : undefined}
     />)
   }
   return (
@@ -69,9 +71,9 @@ function Buttons({onCustomClickShow, count}) {
   )
 }
 
-function EachButton({onCustomClick, id, isActive}) {
+function EachButton({onCustomClick, id, isActive, bkg = 'white'}) {
   return (
-    <FaRegCircle onClick={onCustomClick} className="circle" />
+    <FaRegCircle onClick={onCustomClick} className="circle" style={{backgroundColor : bkg}} />
 
 
   )
