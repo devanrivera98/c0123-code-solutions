@@ -15,7 +15,7 @@ export default function Users() {
     async function fetchList() {
       let ignore = false;
       try {
-        const response = await fetch('https://sonplaceholder.typicode.com/users');
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
         const jsonData = await response.json();
         if (!ignore && response.ok) {
           console.log('My jsonData:', jsonData)
