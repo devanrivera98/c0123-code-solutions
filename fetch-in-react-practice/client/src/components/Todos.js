@@ -14,7 +14,7 @@ export default function Todos() {
   useEffect(() => {
     async function getRequest() {
       try {
-        const response = await fetch(url`/api/todos`)
+        const response = await fetch(url(`/api/todos`))
         if (!response.ok) {
           console.log('GET: Error');
           throw new Error(`Response error: ${response.status}`)
@@ -43,7 +43,7 @@ export default function Todos() {
 
       async function addPost() {
         try {
-          const response = await fetch(url`/api/todos`, {method : 'POST', headers: {"Content-Type" : "application/json"}, body : JSON.stringify(newTodo)})
+          const response = await fetch(url(`/api/todos`), {method : 'POST', headers: {"Content-Type" : "application/json"}, body : JSON.stringify(newTodo)})
           // console.log(response.body)
           // console.log(todos)
           const arrayToDos = todos.concat(newTodo)
