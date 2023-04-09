@@ -16,12 +16,12 @@ export default function Todos() {
       try {
         const response = await fetch(url(`/api/todos`))
         if (!response.ok) {
-          console.log('GET: Error');
+          console.log('This is the respose', response);
           throw new Error(`Response error: ${response.status}`)
         }
         const jsonData = await response.json();
         setTodos(jsonData);
-        console.log('GET: Success');
+        console.log('GET: Success', jsonData);
       }
       catch (err) {
         setError(err)
@@ -44,19 +44,22 @@ export default function Todos() {
       async function addPost() {
         try {
           const response = await fetch(url(`/api/todos`), {method : 'POST', headers: {"Content-Type" : "application/json"}, body : JSON.stringify(newTodo)})
-          // console.log(response.body)
-          // console.log(todos)
-          const arrayToDos = todos.concat(newTodo)
+          console.log('This is the response',response.body)
           if (!response.ok) {
             throw new Error(`Response error: ${response.status}`)
           }
           const jsonData = await response.json();
+          const arrayToDos = todos.concat(jsonData)
+          // console.log('This is jsonData', jsonData)
+          // console.log('This is arrayToDos', arrayToDos)
           setTodos(arrayToDos);
-          // console.log('POST Response',todos)
         }
         catch (err) {
           setError(err);
           console.log('There was an POST error', error)
+        }
+        finally {
+          setIsLoading(false)
         }
       }
       addPost();
