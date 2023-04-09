@@ -1,40 +1,39 @@
 import { FaRegCircle, FaLessThan, FaGreaterThan } from 'react-icons/fa'
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import './Carousel.css'
-import readItems from './PokemonList';
+// import readItems from './PokemonList';
 
 
-readItems();
+// readItems();
 
 export default function Carousel({url, name, characterList}) {
   const [current, setCurrent] = useState(0)
-  // const [attribute, setAttribute] = useState()
-  // const [photo, setPhoto] = useState()
 
-  // useEffect(() => {
-  //   readItems()
-  //   .then((res) => {
-  //     console.log('Working?')
-  //     setAttribute(res)
-  //     setPhoto(characterList[0].url)
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
+  const carouselMovement = () => {
+    if (current === characterList.length - 1) {
+      return setCurrent(0)
+    }
+    return setCurrent(current + 1)
+  }
 
-  // })
+  function handleClick(number) {
+    if (number !== current) {
+      setCurrent(number)
+    }
+  }
 
-  // function handleClick() {
-
-  // }
+  useEffect(() => {
+    const interval = setInterval(() => {carouselMovement()}, 1000)
+    return () => clearInterval(interval)
+  })
 
   return (
     <>
     <div className='row'>
       <div className='holder'>
-        <LeftArrow />
-        <img alt={characterList[0].name} src= {characterList[0].url} />
-        <RightArrow />
+        <LeftArrow onCustomClick={() => setCurrent(((current -1) + characterList.length) % characterList.length)} />
+        <CurrentImage isActive={current} alt={characterList[0].name} image={handleClick} characterList={characterList} />
+          <RightArrow onCustomClick={() => setCurrent((current + 1) % characterList.length)} />
       </div>
       <div className='selector'>
         <Buttons current={current} onCustomClickShow={(index) => setCurrent(index)} count={characterList.length}/>
@@ -44,12 +43,27 @@ export default function Carousel({url, name, characterList}) {
   )
 }
 
+function CurrentImage({characterList, isActive}) {
+  const characterListItems = characterList.map(characterList =>
+    <>
+      {isActive === characterList.number ? (<img id={characterList.number} key={characterList.number} alt={characterList.name} src={characterList.url} />) : undefined }
+
+    </>
+
+    )
+    return (
+      <>
+      <div>{characterListItems}</div>
+      </>
+    )
+}
+
 function RightArrow({onCustomClick}) {
-  return (<FaGreaterThan className='arrows'/>)
+  return (<FaGreaterThan onClick={onCustomClick} className='arrows'/>)
 }
 
 function LeftArrow({onCustomClick}) {
-  return (<FaLessThan className='arrows' />)
+  return (<FaLessThan onClick={onCustomClick} className='arrows' />)
 }
 
 function Buttons({onCustomClickShow, count, current}) {
