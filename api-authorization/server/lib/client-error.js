@@ -1,10 +1,10 @@
 export class ClientError extends Error {
-  // status;
+
+  status;
+
 
   constructor(status, message) {
     super(message);
     this.status = status;
   }
 }
-
-//

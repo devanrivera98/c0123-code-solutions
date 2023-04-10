@@ -16,7 +16,7 @@ export function authorizationMiddleware(req, res, next) {
 
   req.user = payload;
   next();
-  //
+
   /* your code here */
   /**
    * Get the 'Authorization' header from the request.

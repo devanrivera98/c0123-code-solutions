@@ -11,5 +11,3 @@ export function errorMiddleware(err, req, res, next) {
     res.status(500).json({ error: 'an unexpected error occurred' });
   }
 }
-
-//

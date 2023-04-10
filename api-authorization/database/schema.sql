@@ -24,5 +24,3 @@ create table "public"."flashcards" (
   foreign key ("userId")
    references "users" ("userId")
 );
-
---
