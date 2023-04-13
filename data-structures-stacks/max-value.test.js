@@ -16,7 +16,7 @@ describe('maxValue(stack)', () => {
 
     it('returns the maximum value in `stack`', () => {
 
-      const stack1 = new Stack(45, 26, 34, 85, 37, 0);
+      const stack1 = new Stack(45, 26, 34, 85, 25, 40, 37, 0);
       expect(maxValue(stack1)).toEqual(85);
 
       const stack2 = new Stack(-847626, -9234752, -7444);

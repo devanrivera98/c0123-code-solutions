@@ -4,9 +4,12 @@ export default function maxValue(stack) {
     return -Infinity;
   }
 
-  while (stack.peek() >= maxNumber) {
-    maxNumber = stack.peek();
+  for (let i = 0; stack.peek() !== undefined; i++) {
+    if (maxNumber < stack.peek()) {
+      maxNumber = stack.peek();
+    }
     stack.pop();
+    i++;
   }
   return maxNumber;
 }
