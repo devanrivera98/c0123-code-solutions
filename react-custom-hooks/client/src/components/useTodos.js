@@ -29,38 +29,47 @@ export function useTodos() {
 
   }, [todos]);
 
-  function addTodo(newTodo) {
+ async function addTodo(newTodo) {
     /* TODO: Call the API function that creates a Todo item.
      * When the promise returned by that function resolves, update the `todos` state.
      * Note that it is critical that you pass a _new_ array. Do not modify the `todos` array.
      */
-
-    async function addThis() {
+    try {
       const todo = await createTodo(newTodo)
       console.log(todo)
       setTodos((prev) => prev.concat(todo))
     }
-    addThis()
+    catch (err) {
+      console.log(err)
+    }
+
+    // async function addThis() {
+    //   const todo = await createTodo(newTodo)
+    //   console.log(todo)
+    //   setTodos((prev) => prev.concat(todo))
+    // }
+    // addThis()
   }
 
-  function toggleCompleted(todoId) {
-    const findTodo = todos.find((todo) => todo.todoId === todoId)
-    console.log(findTodo)
-    if (findTodo) {
-      findTodo.isCompleted = !findTodo.isCompleted
+  async function toggleCompleted(todoId) {
+    const oldTodo = todos.find((todo) => todo.todoId === todoId);
+    const req = {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ isCompleted: !oldTodo.isCompleted }),
+    };
+    try {
+      const res = await fetch(url(`/api/todos/${todoId}`), req);
+      if (!res.ok) throw new Error(`fetch Error ${res.status}`);
+      const updated = await res.json();
+      const allTodos = todos.map((original) =>
+        original.todoId === updated.todoId ? updated : original
+      );
+      setTodos(allTodos);
     }
-    async function updateThis() {
-      const editedTodo = await updateTodo(findTodo)
-      console.log('This is for toggleCompleted', editedTodo)
-      setTodos((prev) => prev.concat(editedTodo))
+    catch (err) {
+      console.log(err)
     }
-    /* TODO: Find the Todo item being updated, toggle its completed prop, and call
-     * the API function that updates a Todo item.
-     * When the promise returned by that function resolves, update the `todos` state.
-     * When updating this state, use the updated `todo` returned from the API.
-     * Note that it is critical that you pass a _new_ array. Do not modify the `todos` array.
-     */
-    updateThis()
   }
 
   return {
