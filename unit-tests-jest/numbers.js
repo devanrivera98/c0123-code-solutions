@@ -9,7 +9,7 @@ export function evenNumbers(numbers) {
  * Returns a number formatted in dollars and cents.
  */
 export function toDollars(amount) {
-  return `$${amount}.00`;
+  return `$${amount.toFixed(2)}`;
 }
 
 /**
